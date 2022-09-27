@@ -13,9 +13,10 @@ def test_check_product_page_contains_cart_button(browser, site):
     link = site
     browser.maximize_window()
     browser.get(link)
+    #time.sleep(30)
     button_basket = WebDriverWait(browser, 10).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, ".btn-add-to-basket")))
-    time.sleep(30)
+
 
     assert button_basket.text == "Añadir al carrito" or button_basket.text == "Add to basket", f"Esta no es una localización en español o inglés del sitio!\nThis is not a Spanish or English localization of the site!"
 
