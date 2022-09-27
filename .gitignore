@@ -1,0 +1,7 @@
+*.cfg
+*.png
+Scripts
+Lib
+get-pip.py
+.pytest_cache
+__pycache__
